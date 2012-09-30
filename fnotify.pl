@@ -4,15 +4,15 @@ use strict;
 use vars qw($VERSION %IRSSI);
 
 use Irssi;
-$VERSION = '0.0.3';
+$VERSION = '0.0.4';
 %IRSSI = (
-	authors     => 'Thorsten Leemhuis',
-	contact     => 'fedora@leemhuis.info',
+	authors     => 'Thorsten Leemhuis, Alojzij Blatnik',
+	contact     => 'fedora@leemhuis.info, lojze.blatnik@gmail.com',
 	name        => 'fnotify',
 	description => 'Write a notification to a file that shows who is talking to you in which channel.',
-	url         => 'http://www.leemhuis.info/files/fnotify/',
+	url         => 'https://github.com/englishman/irssi-notif/blob/master/fnotify.pl',
 	license     => 'GNU General Public License',
-	changed     => '$Date: 2007-01-13 12:00:00 +0100 (Sat, 13 Jan 2007) $'
+	changed     => '2012-09-29'
 );
 
 #--------------------------------------------------------------------
@@ -45,6 +45,11 @@ sub hilight {
 	filewrite($dest->{target}. " " .$stripped );
     }
 }
+
+#--------------------------------------------------------------------
+# Print all messages from specific channels
+#--------------------------------------------------------------------
+
  sub event_channel {
     # $data = "nick/#channel :text"
     my ($dest, $text, $stripped) = @_;
