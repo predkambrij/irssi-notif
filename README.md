@@ -14,6 +14,8 @@ That computer is typically remote computer that you are all time online but that
 
 Computer where notify-send messages will be displayed:
 
+    $ #install notify-send command (ubuntu)
+    # apt-get install notify-osd libnotify-bin
     $ #edit file irchack.sh that fields will fit your needs:
     $ screen ./irchack.sh # if you're connecting from external network
     $ screen ./irchack.sh home # when you need to use local ip of target machine
